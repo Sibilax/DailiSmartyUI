@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Logo form './logo';
+import Logo from './logo';
 
 class Results extends Component {
     render() {

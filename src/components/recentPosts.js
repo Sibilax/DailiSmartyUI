@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+
+import Post from './post';
 
 class RecentPosts extends Component {
 
@@ -12,9 +13,7 @@ class RecentPosts extends Component {
   renderPosts = function() {
     return this.props.recentPosts.map((post, index) => {
         return (
-            <li key={index}>  
-                {post.title} {/* luego lo cambiamos, de momento solo queremos verificar que funcione */}
-            </li>
+          <Post {...post} key={index}/>
         )
     })
     return posts

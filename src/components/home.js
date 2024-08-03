@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 import Logo from './logo';
 import SearchBar from './searchBar';
 import RecentPosts from './recentPosts';
 
 
-export default class Home extends Component {
+class Home extends Component {
 
   handleSearchBarSubmit(query) {
-    console.log('trying to handle subimit for query', query);
+    this.props.fecthPostsWithQuery(query); //con esto debrriamos acceder a la búsqueda
     this.props.history.push('/results');
   }
 
